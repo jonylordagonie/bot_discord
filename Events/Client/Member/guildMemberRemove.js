@@ -18,11 +18,10 @@ module.exports = {
     });
 
     const Goodbye = new MessageEmbed()
-      .setTitle("Bienvenue")
+      .setTitle("Aurevoir")
       .setImage(user.avatarURL())
       .addFields({ name: `${user.tag}` });
     
     Byemer.send({ embeds: [Goodbye] });
-    message.channel.send({ embeds: [Goodbye] });
   }
 }

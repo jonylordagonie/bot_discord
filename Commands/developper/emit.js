@@ -19,10 +19,6 @@ module.exports = {
           name: "guildMemberRemove",
           value: "guildMemberRemove",
         },
-        {
-          name: "ping",
-          value: "ping",
-        },
       ],
     },
   ],
@@ -51,11 +47,6 @@ module.exports = {
             content: "Emet l'évènement d'une départ",
             ephemeral: true,
           });
-        }
-        break;
-      case "ping":
-        {
-          client.emit("ping");
         }
         break;
     }

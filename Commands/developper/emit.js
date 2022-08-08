@@ -19,6 +19,10 @@ module.exports = {
           name: "guildMemberRemove",
           value: "guildMemberRemove",
         },
+        {
+          name: "guildTest",
+          value: "guildTest",
+        },
       ],
     },
   ],
@@ -29,7 +33,7 @@ module.exports = {
    */
   execute(interaction, client) {
     const choices = interaction.options.getString("member");
-
+    console.log("execute le test")
     switch (choices) {
       case "guildMemberAdd":
         {
@@ -45,6 +49,16 @@ module.exports = {
           client.emit("guildMemberRemove", interaction.member);
           interaction.reply({
             content: "Emet l'évènement d'une départ",
+            ephemeral: true,
+          });
+        }
+        break;
+      case "guildTest":
+        {
+          console.log("passe par le case")
+          client.emit('guildTest', interaction.member);
+          interaction.reply({
+            content: "Emet un test",
             ephemeral: true,
           });
         }

@@ -7,5 +7,4 @@ client.commands = new Collection();
 require("./Handlers/Commands")(client);
 require('./Handlers/Events')(client);
 
-
 client.login(Token);
